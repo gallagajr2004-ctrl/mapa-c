@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><title>Implementación y operación de sistemas de la cadena de suministro</title>
+<meta name="viewport" content="width=1600">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',Calibri,Arial,sans-serif;background:#fff;color:#16303B;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:1600px;margin:0 auto;padding:44px 48px 36px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid #0B5563;padding-bottom:16px;margin-bottom:30px}
+.head h1{font-size:30px;font-weight:800;color:#0A2B3D;letter-spacing:-.4px}
+.head p{font-size:14px;color:#4B6672;margin-top:4px;font-weight:500}
+.tag{font-size:13px;font-weight:700;color:#fff;background:linear-gradient(90deg,#0B5563,#3B4A9E);padding:8px 16px;border-radius:999px;white-space:nowrap}
+.root{display:flex;flex-direction:column;align-items:center}
+.rootnode{background:linear-gradient(135deg,#0A2B3D,#14707F 60%,#3B4A9E);color:#fff;border-radius:20px;padding:20px 38px;text-align:center;max-width:760px;box-shadow:0 8px 22px rgba(10,43,61,.22)}
+.rootnode b{display:block;font-size:24px;font-weight:800;letter-spacing:-.3px}
+.rootnode span{display:block;font-size:13.5px;margin-top:6px;opacity:.88;font-weight:500}
+.rootline{width:2px;height:30px;background:#9DB5BF}
+.tree{display:flex;gap:16px}
+.branch{flex:1;position:relative;min-width:0;display:flex;flex-direction:column}
+.branch::before{content:"";position:absolute;top:0;left:-8px;right:-8px;height:2px;background:#9DB5BF}
+.branch:first-child::before{left:50%}
+.branch:last-child::before{right:50%}
+.branch:only-child::before{display:none}
+.conn{position:relative;height:74px;display:flex;align-items:center;justify-content:center}
+.conn::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:#9DB5BF}
+.conn::after{content:"";position:absolute;left:50%;bottom:-1px;margin-left:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:9px solid #9DB5BF}
+.pill{position:relative;z-index:1;background:#fff;border:1.8px solid var(--c);color:var(--c);font-style:italic;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:999px;text-align:center;max-width:95%}
+.card{flex:1;border-radius:16px;overflow:hidden;background:#F4F9FB;border:1.5px solid color-mix(in srgb,var(--c) 28%,#fff);box-shadow:0 4px 14px rgba(10,43,61,.08)}
+.ch{background:var(--c);color:#fff;font-weight:800;font-size:16px;padding:13px 14px;text-align:center;letter-spacing:-.1px}
+.cb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:9px}
+.it{font-size:12.6px;line-height:1.45;background:#fff;border-left:4px solid var(--c);border-radius:8px;padding:7px 9px;box-shadow:0 1px 3px rgba(10,43,61,.06)}
+.it em{display:block;font-size:11.3px;font-weight:700;color:var(--c);font-style:italic;margin-bottom:1px}
+.it b{font-weight:700;color:#0A2B3D}
+.xr{margin-top:34px;border:1.5px solid #CFE0E7;border-radius:16px;padding:16px 20px;background:linear-gradient(180deg,#fff,#F4F9FB)}
+.xr h2{font-size:15px;font-weight:800;color:#0A2B3D;margin-bottom:12px}
+.chains{display:flex;flex-direction:column;gap:10px}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.cn{background:#0A2B3D;color:#fff;font-weight:700;font-size:12.8px;padding:7px 14px;border-radius:10px}
+.cl{font-size:12px;font-style:italic;font-weight:700;color:#14707F;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.cl::after{content:"";width:22px;height:2px;background:#14707F;display:inline-block}
+.cl i{font-style:normal;color:#14707F;font-size:10px;margin-left:-10px;order:3}
+.foot{margin-top:20px;font-size:11.5px;color:#5C7580;line-height:1.5;border-top:1px solid #DCE8ED;padding-top:12px}
+.foot b{color:#0A2B3D}
+</style></head><body><div class="page">
+<div class="head"><div><h1>Implementación y operación de sistemas de la cadena de suministro</h1><p>Mapa conceptual · Reto 1: Conexión de puntos clave, mapeando la integración de la cadena de suministros</p></div><div class="tag">Mapa c de 5</div></div>
+<div class="root"><div class="rootnode"><b>Sistemas de información en la cadena de suministro</b><span>Coordinan materiales, información y dinero desde el proveedor hasta el cliente final</span></div><div class="rootline"></div></div>
+<div class="tree"><div class="branch" style="--c:#0B5563"><div class="conn"><span class="pill">gestiona</span></div>
+<div class="card"><div class="ch">Cadena y sus flujos</div><div class="cb"><div class="it"><em>flujo de</em><b>Materiales:</b> del proveedor al cliente</div><div class="it"><em>flujo de</em><b>Información:</b> pedidos, pronósticos e inventarios en tiempo real</div><div class="it"><em>flujo</em><b>Financiero:</b> pagos, crédito y cobranza</div><div class="it"><em>conecta a</em>proveedores, fabricantes, distribuidores, minoristas y clientes</div></div></div></div><div class="branch" style="--c:#14707F"><div class="conn"><span class="pill">se implementa en</span></div>
+<div class="card"><div class="ch">Fases de implementación</div><div class="cb"><div class="it"><em>primero</em><b>Diagnóstico y planeación:</b> objetivos, alcance y presupuesto</div><div class="it"><em>luego</em><b>Selección:</b> requerimientos y evaluación de proveedores</div><div class="it"><em>después</em><b>Diseño y configuración:</b> adaptar procesos y módulos</div><div class="it"><em>a continuación</em><b>Migración y pruebas:</b> depurar datos y pilotos</div><div class="it"><em>más tarde</em><b>Capacitación y arranque</b> (puesta en marcha)</div><div class="it"><em>finalmente</em><b>Soporte y mejora continua</b></div></div></div></div><div class="branch" style="--c:#1C6A9C"><div class="conn"><span class="pill">opera procesos de</span></div>
+<div class="card"><div class="ch">Operación general</div><div class="cb"><div class="it"><em>planear</em>demanda, capacidad y pronósticos</div><div class="it"><em>abastecer</em>compras, proveedores y recepción de materiales</div><div class="it"><em>producir</em>órdenes y programación de la producción</div><div class="it"><em>entregar</em>pedidos, almacén y transporte</div><div class="it"><em>devolver</em><b>logística inversa</b> y garantías (enfoque SCOR)</div></div></div></div><div class="branch" style="--c:#2A55A3"><div class="conn"><span class="pill">se habilita con</span></div>
+<div class="card"><div class="ch">Tecnologías habilitadoras</div><div class="cb"><div class="it"><em>núcleo</em><b>ERP:</b> integra finanzas, compras, producción y ventas</div><div class="it"><em>logística</em><b>WMS y TMS:</b> gestión de almacén y transporte</div><div class="it"><em>intercambio</em><b>EDI:</b> documentos electrónicos entre socios</div><div class="it"><em>trazabilidad</em><b>IoT, RFID y GPS:</b> seguimiento en tiempo real</div><div class="it"><em>confianza</em><b>Blockchain:</b> registro compartido y trazable</div><div class="it"><em>análisis</em><b>Analítica e IA</b> para pronosticar demanda</div></div></div></div><div class="branch" style="--c:#3B4A9E"><div class="conn"><span class="pill">depende de</span></div>
+<div class="card"><div class="ch">Éxito y riesgos</div><div class="cb"><div class="it"><em>requiere</em>respaldo de la <b>alta dirección</b></div><div class="it"><em>exige</em><b>gestión del cambio</b> y capacitación</div><div class="it"><em>necesita</em><b>datos maestros</b> limpios y confiables</div><div class="it"><em>riesgo:</em><b>resistencia al cambio</b> y costos elevados</div><div class="it"><em>riesgo:</em>integración con <b>sistemas heredados</b></div><div class="it"><em>riesgo:</em><b>ciberseguridad</b> y dependencia tecnológica</div></div></div></div><div class="branch" style="--c:#4A3F93"><div class="conn"><span class="pill">se evalúa con</span></div>
+<div class="card"><div class="ch">Resultados</div><div class="cb"><div class="it"><em>aporta</em><b>visibilidad</b> de extremo a extremo</div><div class="it"><em>mejora</em><b>nivel de servicio:</b> entregas completas y a tiempo</div><div class="it"><em>optimiza</em><b>rotación y nivel de inventario</b></div><div class="it"><em>reduce</em><b>costos logísticos</b> y de almacenamiento</div><div class="it"><em>acorta</em>el <b>tiempo de ciclo</b> del pedido</div></div></div></div></div>
+<div class="xr"><h2>Relaciones transversales entre conceptos</h2><div class="chains"><div class="chain"><span class="cn">Visibilidad de la cadena</span><span class="cl">reduce el<i>&#9654;</i></span><span class="cn">efecto látigo</span><span class="cl">al alinear<i>&#9654;</i></span><span class="cn">oferta y demanda</span></div><div class="chain"><span class="cn">Datos maestros confiables</span><span class="cl">condicionan el<i>&#9654;</i></span><span class="cn">éxito de la implementación</span></div><div class="chain"><span class="cn">IoT y Blockchain</span><span class="cl">aportan<i>&#9654;</i></span><span class="cn">trazabilidad</span><span class="cl">que fortalece la<i>&#9654;</i></span><span class="cn">confianza entre socios</span></div></div></div>
+<div class="foot"><b>Fuentes base:</b> Mejía Trejo (2023); Hernández Ramos (2018); González et al. (2022); Ruiz Anchondo (2009); Fugini et al. (2018).</div>
+</div></body></html>
